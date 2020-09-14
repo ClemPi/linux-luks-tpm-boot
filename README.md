@@ -172,7 +172,7 @@ Add the keyscript parameter, so that your system will know to get the key file f
 
 We are nearly done. The only thing left is to add some things to the initrd, so that we are able to communicate with the TPM while in the initrd. But before we mess around with our initrd, let's make a backup of the one we have:
 
-`sudo cp /boot/initrd.img-$(uname -r) /boot/initrd.img-$(uname -r).orig`
+`sudo cp /boot/initrd.img-$(uname -r) /boot/initrd.img.orig`
 
 Afterwards, we create a hook for the initramfs-tools. This is a script that adds the additional files to the initrd that we will need to talk to the TPM within the initrd. So download `tpm-hook` and move it in the directory for the initramfs-hooks:
 
